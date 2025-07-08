@@ -1,5 +1,9 @@
+"use client"
+
 import Image from "next/image";
 import WeekDays from "./weekDays";
+
+import { usePathname } from "next/navigation";
 
 const weekNames = [
   "Domingo",
@@ -18,6 +22,9 @@ const month = today.toLocaleString("pt-BR", { month: "short" })
 const year = today.getFullYear()
 
 export default function TopBar() {
+
+  const pathname = usePathname()
+
   return (
     <div className="absolute top-0 p-6 shadow-xl rounded-b-4xl w-full">
       <div className="flex justify-between items-center">
@@ -39,7 +46,9 @@ export default function TopBar() {
           <h4 className="text-xs font-bold italic text-[#494949] capitalize">{day} {month} {year}</h4>
         </div>
       </div>
-      <WeekDays daysAmount={5} />
+      <div className={pathname !== "/" ? `hidden` : undefined}>
+        <WeekDays daysAmount={5} />
+      </div>
     </div>
   )
 }

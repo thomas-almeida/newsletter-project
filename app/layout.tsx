@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import TopBar from "./components/topbar";
+import Navigation from "./components/navigation";
 
 export const metadata: Metadata = {
   title: "TrampooFy - Reports para ser Promovido",
@@ -14,7 +16,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        {children}
+        <TopBar />
+        <div className="flex flex-col justify-center items-center h-screen">
+          {children}
+        </div>
+        <Navigation />
       </body>
     </html>
   );
