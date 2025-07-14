@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         <TopBar />
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center">
           {children}
         </div>
         <Navigation />

@@ -11,7 +11,7 @@ export default function Navigation() {
 
   return (
     <>
-      <div className="grid grid-cols-3 items-center w-full p-4 absolute bottom-0 border-t border-slate-100">
+      <div className="grid grid-cols-3 items-center w-full p-4 absolute bottom-0 border-t">
 
         <Link href="/">
           <RiHomeLine

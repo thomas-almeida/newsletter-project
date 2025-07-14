@@ -26,7 +26,7 @@ export default function TopBar() {
   const pathname = usePathname()
 
   return (
-    <div className="absolute top-0 p-6 shadow-xl rounded-b-4xl w-full">
+    <div className="p-6 shadow-xl rounded-b-4xl w-full">
       <div className="flex justify-between items-center">
         <div className="flex justify-start items-center gap-3">
           <Image
